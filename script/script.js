@@ -1,12 +1,35 @@
+let resultado;
+function edad(param){
+    if (param >= 18) {
+        resultado = 'Eres mayor de edad';
+    }else if(param >= 0){
+        resultado = 'Eres menor de edad';
+    }else{
+        resultado = 'Ingresa una edad correctamente'
+    }
 
+}
 
 function variable(){
     // Lee el valor ingresado en el input
-    let ecuacion = (document.getElementById('input').value);
-
+    let ecuacion = parseInt(document.getElementById('input').value);
+    edad(ecuacion);
+    
     // Imprime la variable final en el DOM
-    document.getElementById('resultado').textContent = ecuacion;
+    document.getElementById('resultado').textContent = resultado;
 }
+
+
+// switch (ecuacion) {
+//     case "y'":
+//         resultado = 'La funcion es cuadratica';
+//         break;
+
+//     default:
+//         break;
+// }
+
+
 
 // const math = require('mathjs');
 

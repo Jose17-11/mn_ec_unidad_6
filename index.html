@@ -4,20 +4,186 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML"></script>
     <link rel="stylesheet" href="./style/style.css">
     <script src="./script/script.js"></script>
     <title>Métodos - numéricos</title>
 </head>
 <body>
-    <div class="container">
-        <form action="input" class="container__form form">
-            <label for="" class="form__label">Ingresa la ecuación</label>
-            <input type="text" class="form__input" id="input">
-            <button type="button" class="form__button" onclick="variable();">Enviar</button>
-            <label for="" class="form__resultado">El resultado es: 
-                <span id="resultado"></span>
-            </label>
-        </form>
+    <nav class="nav">
+        <h1 class="title">
+            <a href="#" class="title__a">MN_ISC_ITC_T6_Proyecto</a>
+        </h1>
+        <ul class="lista">
+            <li class="lista__inciso"> <a href="#div-2" class="lista__enlace">¿Qué es?</a></li>
+            <li class="lista__inciso"> <a href="#div-3" class="lista__enlace">clasificacion</a></li>
+            <li class="lista__inciso"> <a href="#div-4" class="lista__enlace">Tabla</a></li>
+            <li class="lista__inciso"> <a href="#calculator" class="lista__enlace">Calculadora</a></li>
+        </ul>
+    </nav>
+
+    <div class="introduccion">
+        <div class="introduccion2">
+            <h2 class="introduccion__h2">Introducción</h2>
+            <p class="introduccion__p">Este es un sitio web y a su ves una guia introductoria a las ecuaciones diferenciales que explicara que es una ecuacion diferencial y como se clasifica una ecuación diferencial mediante el tipo, orden y grado para despues puedan ver una tabla con ejemplos de ecuaciones diferenciales y unas instrucciones sobre como resolver ecuaciones diferenciales en el Software Geogebra.</p>
+        </div>
     </div>
+    
+    <div class="definicion" id="div-2">
+        <h2 class="definicion__h2">¿Qué es una ecuación diferencial?</h2>
+        <p class="definicion__p">A continuacion pondremos 3 definiciones de una ecuación diferencial:</p>
+        <ol class="definicion__lista">
+            <li class="definicion__inciso">Una ecuación diferencial es aquella ecuación que contiene derivadas o diferenciales.</li>
+            <li class="definicion__inciso">Orden de una ecuación diferencial es el de la derivada de mayor orden contenida en la ecuación.</li>
+            <li class="definicion__inciso">Grado de una ecuación diferencial es la potencia a la que está elevada la derivada  de mayor orden, siempre y cuando la ecuacion diferencial esté dada en forma normal.</li>
+        </ol>
+        <p class="definicion__parrafo" >Podemos decir de una manera mas facil y entendible que una ecuacion diferencial es una ecuacion, solo que la ecuacion siempre debera contener una derivada y tiene varias caracteristicas que clasifican de manera mas exacta a una ecuacion diferencial.</p>
+    </div>
+
+    <div class="clasificacion" id="div-3">
+        <h2 class="clasificacion__h2">clasificación</h2>
+        <p class="clasificacion__p">Como ya mencionamos antes una ecuacion diferencial se clasfica de varias maneras y esas son las siguientes: </p>
+        <ol class="clasificacion__lista">
+            <li class="clasificacion__inciso">Tipo:
+                <ul>
+                    <li class="incisos">Ordinarias: 
+                        <p>La ecuación diferencial contiene derivadas de una o más variables dependientes con respecto a una sola variable independiente.</p>
+                    </li>
+                    <li class="incisos">Parciales:
+                        <p>La ecuación diferencial contiene derivadas parciales de una o mas variables dependientes con respecto a dos o más variables independientes.</p>
+                    </li>
+                </ul>
+            </li>
+
+            
+            <li class="clasificacion__inciso">Orden:
+                <ul>
+                    <li class="incisos">Primer orden: 
+                        <p>F(x, y, y') = 0</p>
+                    </li>
+                    <li class="incisos">Segundo orden: 
+                        <p>F(x, y', y'') = 0</p>
+                    </li>
+                    <li class="incisos">Tercer orden: 
+                        <p>F(x, y, y', y'', y''') = 0</p>
+                    </li>
+                    <li class="incisos">*
+
+                    </li>
+                    <li class="incisos">Orden n: 
+                        <p>F(x, y, y', ..., \(y^n\)) = 0</p>
+                    </li>
+                </ul> 
+            </li>
+            
+            
+            <li class="clasificacion__inciso">Grado:
+                <ul>
+                    <li class="incisos">Lineales: 
+                        <ul>
+                            <li class="incisos">La variable dependiente y todas sus derivadas son de primer grado.</li>
+                            <li class="incisos">Cada coeficiente de Y y sus derivadas depende solamente de la variable independiente X.</li>
+                        </ul>
+                    </li>
+                    <li class="incisos">No lineales: 
+                        <p>Las que no cumplen las propiedades anteriores.</p>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+    
+    <div class="tabla" id="div-4">
+        <h2 class="tabla__h2">Tabla de clasificaciones</h2>
+        <table>
+            <tr>
+              <td class="tdOscuro" colspan="5">Ejemplos de ecuaciones diferenciales.</td>
+            </tr>
+            <tr>
+              <td class="tdGris">Ecuación diferencial</td>
+              <td class="tdGris">Tipo</td>
+              <td class="tdGris">Orden</td>
+              <td class="tdGris">Grado</td>
+              <td class="tdGris">Lineal</td>
+            </tr>
+            <tr>
+              <td class="ecuacion">
+                \(\frac{dy}{dx}\) = \(2e^{-x}\)
+              </td>
+              <td>Ordinaria</td>
+              <td>1</td>
+              <td>1</td>
+              <td>Sí</td>
+            </tr>
+            <tr>
+              <td class="ecuacion">
+                \(\frac{\partial y}{\partial t}\) = \(\frac{\partial x}{\partial t}\) + \(kx\) -\(\frac{\partial y}{\partial s}\)
+              </td>
+              <td>Parcial</td>
+              <td>1</td>
+              <td>1</td>
+              <td>Sí</td>
+            </tr>
+            <tr>
+                <td class="ecuacion">
+                    \(x²y''+xy'+y = 0 \)
+                </td>
+                <td>Ordinaria</td>
+                <td>2</td>
+                <td>1</td>
+                <td>Sí</td>
+            </tr>
+            <tr>
+              <td class="ecuacion">
+                \(yy''+x^2y = x\)
+              </td>
+              <td>Ordinaria</td>
+              <td>2</td>
+              <td>1</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td class="ecuacion">
+                \(\frac{\partial y}{\partial t}\)+\(\frac{\partial^2 y}{\partial s^2} = c\)
+              </td>
+              <td>Parcial</td>
+              <td>2</td>
+              <td>1</td>
+              <td>Sí</td>
+            </tr>
+            <tr>
+              <td class="ecuacion">
+                \(x^2 \frac{d^2 y}{d x^2} + x\frac{d y}{d x} + (x^2 - v^2)y = 0\)
+              </td>
+              <td>Ordinaria</td>
+              <td>2</td>
+              <td>1</td>
+              <td>Sí</td>
+            </tr>
+          </table>
+          <p class="tabla__parrafo">
+            Si da click en el siguiente boton aparecera una guia sobre como resolver ecuaciones diferenciales en Geogebra.
+            <a href="./guia.html" target="_blank" class="tabla__enlace">Guía</a>
+          </p>
+          
+    </div>
+    <div class="symbolab">
+        <!-- <iframe src="https://www.geogebra.org/classic?lang=es" frameborder="1" width="100%" height="800px"></iframe> -->
+    </div>
+    <div class="calculadora" id="calculator">
+        <div class="container">
+            <form action="input" class="container__form form">
+                <label for="" class="form__label">Ingresa la ecuación</label>
+                <input type="number" class="form__input" id="input">
+                <button type="button" class="form__button" onclick="variable();">Enviar</button>
+                <label for="" class="form__resultado">El resultado es: 
+                    <span class="form__respuesta" id="resultado"></span>
+                </label>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <p class="footer__p">Propiedad intelectual y derechos de autor de José Manuel Arias Hernández</p>
+    </footer>
 </body>
 </html>
